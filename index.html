@@ -1,1 +1,69 @@
-HELLO WORLD
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		@font-face {
+			font-family: 'blackcasperregular';
+			src: url('font/blackcasper-webfont.woff2') format('woff2'),
+			url('font/blackcasper-webfont.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+
+		}
+		body {
+			background-image: url("img/bg.gif");
+			background-repeat: repeat;
+			text-align: center;
+			font-family: 'blackcasperregular';
+		}
+
+
+		div#main{
+			text-align: center;
+			height: 80%;
+		}
+		html, body { height: 80%; }
+		.gallery{
+			display: -webkit-flex;
+			height: 100%;
+			-webkit-align-items: flex-end;
+			-webkit-justify-content: center;
+		}
+		/* this stops the shrinking of the items */
+		.gallery a {
+			-webkit-flex-shrink: 0;
+		}
+
+		.gallery img{
+			display: inline-block;
+			max-height: 10%;
+
+		}
+		.gallery img:target{
+			position: absolute;
+			top: 0;
+			max-height: 90%;
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+		}
+
+		h1 {
+			color: #fff;
+			font-size: 6em;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>The greatest detectives sends well-wishes to one of their own.</h1>
+	<div id="main">
+		<div class="gallery">
+			<a href="#img1"><img id="img1" src="img/p.png" /></a>
+			<a href="#img2"><img id="img2" src="img/c.gif" /></a>
+			<a href="#img3"><img id="img3" src="img/b.png" /></a>
+			<a href="#img4"><img id="img4" src="img/s.png" /></a>
+		</div>
+	</div>
+
+</body>
+</html>
