@@ -8,15 +8,32 @@
 			url('font/blackcasper-webfont.woff') format('woff');
 			font-weight: normal;
 			font-style: normal;
+		}
+		@font-face {
+			font-family: 'persona_non_grataregular';
+			src: url('font/persona_non_grata-webfont.woff2') format('woff2'),
+			url('font/persona_non_grata-webfont.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'matrixmedium';
+			src: url('font/matrix-webfont.woff2') format('woff2'),
+			url('font/matrix-webfont.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
 
 		}
 		body {
 			background-image: url("img/bg.gif");
 			background-repeat: repeat;
 			text-align: center;
-			font-family: 'blackcasperregular';
+			font-family: 'matrixmedium';
 		}
 
+		h1#pikachu,#conan,#batman,#sherlock{
+			display: none;
+		}
 
 		div#main{
 			text-align: center;
@@ -54,16 +71,37 @@
 	</style>
 </head>
 <body>
-
-	<h1>The greatest detectives sends well-wishes to one of their own.</h1>
+	<h1 id="intro">SPECIAL MESSAGE FOR <br>PATRICK CHAN NINJA</h1>
+	<div id="greetings">
+		<h1 id="pikachu">PIKA PIKA PIII KAA PI... <br> CHU CHU PIKA CHU</h1>
+		<h1 id="conan">お誕生日おめでとうございます</h1>
+		<h1 id="batman">The greatest detectives sends well-wishes to one of their own</h1>
+		<h1 id="sherlock"> uh yes indeed <br> what Mr. Coronavirus said</h1>
+	</div>
 	<div id="main">
 		<div class="gallery">
-			<a href="#img1"><img id="img1" src="img/p.png" /></a>
-			<a href="#img2"><img id="img2" src="img/c.gif" /></a>
-			<a href="#img3"><img id="img3" src="img/b.png" /></a>
-			<a href="#img4"><img id="img4" src="img/s.png" /></a>
+			<a href="#p" onclick="toggle_visibility('pikachu');"><img src="img/p.png" /></a>
+			<a href="#b" onclick="toggle_visibility('batman');"><img src="img/b.png" /></a>
+			<a href="#s" onclick="toggle_visibility('sherlock');"><img src="img/s.png" /></a>
+			<a href="#c" onclick="toggle_visibility('conan');"><img src="img/c.gif" /></a>
 		</div>
 	</div>
 
 </body>
+<script type="text/javascript">
+	<!--
+		function toggle_visibility(id) {
+			var e = document.getElementById(id);
+			intro.style.display = 'none';
+			pikachu.style.display = 'none';
+			conan.style.display = 'none';
+			batman.style.display = 'none';
+			sherlock.style.display = 'none';
+			if(e.style.display == 'block')
+				e.style.display = 'none';
+			else
+				e.style.display = 'block';
+		}
+//-->
+</script>
 </html>
